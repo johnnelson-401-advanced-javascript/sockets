@@ -12,7 +12,8 @@
     "test:verbose": "npm run test -- --verbose",
     "start": "node server.js",
     "start:watch": "nodemon server.js",
-    "read:file": "node reader.js text.txt"
+    "read": "node reader.js text.txt",
+    "capitalize": "node capitalize.js"
   },
   "repository": {
     "type": "git",

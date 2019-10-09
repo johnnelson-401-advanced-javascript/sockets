@@ -12,7 +12,7 @@ io.on('connection', socket => {
   socket.on('file-error', err => {
     console.log(err);
   });
-  // socket.on('file-write', data => {
-  //   console.log(data);
-  // });
+  socket.on('file-write', data => {
+    console.log(data);
+  });
 });

@@ -6,13 +6,13 @@ io.on('connection', socket => {
     socket.broadcast.emit('read-file', data);
     console.log(data);
   });
-  socket.on('capitalized', data => {
+  socket.on('capitalize-file', data => {
     console.log(data);
   });
   socket.on('file-error', err => {
     console.log(err);
   });
-  socket.on('file-write', data => {
-    console.log(data);
+  socket.on('write-file', () => {
+    console.log('file saved');
   });
 });

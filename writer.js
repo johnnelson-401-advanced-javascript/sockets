@@ -3,10 +3,10 @@ const socket = io.connect('http://localhost:7890');
 const writeFile = require('./write-file');
 
 
-socket.on('file-read', data =>{
+socket.on('read-file', data =>{
   writeFile(data)
     .then(data => {
-      socket.emit('file-write', data);
+      socket.emit('write-file', data);
     })
     .catch((err) =>{
       socket.emit('file-error', err);

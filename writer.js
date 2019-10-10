@@ -3,7 +3,7 @@ const socket = io.connect('http://localhost:7890');
 const writeFile = require('./write-file');
 
 
-socket.on('read-file', data =>{
+socket.on('capitalize-file', data =>{
   writeFile(data)
     .then(data => {
       socket.emit('write-file', data);
